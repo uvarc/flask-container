@@ -32,5 +32,5 @@ docker push your-org/your-container-name
 ## Launching in DCOS @ UVA
 
 1. Work with UVA Research Computing to set up your initial Flask service. This may include "production" and "dev" sites along with your `master` and `dev` branches in Git.
-2. We recommend using a CI/CD tool such as Travis-CI to build and deploy your application container with each `git push`.
+2. We recommend using a CI/CD tool such as Travis-CI to build and deploy your application container with each `git push`. See the example `.travis.yml` file for a basic build+push.
 3. UVARC can integrate your build so that it is launched in DCOS as part of that build process.
