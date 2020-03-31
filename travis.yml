@@ -1,3 +1,5 @@
+# Customize this file and rename to `.travis.yml` for implementation.
+
 branches:
   only:
   - master
@@ -17,12 +19,12 @@ before_install:
 
 install:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker build --no-cache -t uvarc/flask-container:latest . || exit 1;
-    docker push uvarac/flask-container:latest || exit 1;
+    docker build --no-cache -t your-org/your-container:latest . || exit 1;
+    docker push your-org/your-container:latest || exit 1;
     fi
   - if [ "$TRAVIS_BRANCH" == "dev" ]; then
-    docker build --no-cache -t uvarc/flask-container:dev . || exit 1;
-    docker push uvarc/flask-container:dev || exit 1;
+    docker build --no-cache -t your-org/your-container:dev . || exit 1;
+    docker push your-org/your-container:dev || exit 1;
     fi
 
 notifications:
@@ -30,4 +32,4 @@ notifications:
     on_success: change
     on_failure: always
     recipients:
-    - nem2p@virginia.edu
+    - mst3k@virginia.edu
