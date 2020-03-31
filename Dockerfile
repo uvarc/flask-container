@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 LABEL maintainer="UVA Research Computing <uvarc@virginia.edu>"
 
 RUN apt-get update
-RUN apt-get install -y python3 python3-dev python3-pip nginx build-essential
+RUN apt-get install -y python3 python3-dev python3-pip nginx
 RUN pip3 install uwsgi
 
 COPY ./ ./app
