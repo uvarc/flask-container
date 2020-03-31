@@ -18,7 +18,7 @@ before_install:
 install:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker build --no-cache -t uvarc/flask-container:latest . || exit 1;
-    docker push uvarac/flask-container:latest || exit 1;
+    docker push uvarc/flask-container:latest || exit 1;
     fi
   - if [ "$TRAVIS_BRANCH" == "dev" ]; then
     docker build --no-cache -t uvarc/flask-container:dev . || exit 1;
