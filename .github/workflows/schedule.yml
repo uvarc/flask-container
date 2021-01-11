@@ -1,9 +1,8 @@
-name: Docker Build CI
+name: Scheduled Build
 
 on:
-  push:
-    branches:
-    - 'master'
+  schedule:
+    - cron: '*/5 * * * *'
 
 jobs:
   build:
