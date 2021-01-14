@@ -12,7 +12,7 @@ A skeleton Python3 / Flask container template for projects.
 From within your cloned and extended version of this repository, first build the container:
 
 ```
-docker build -t your-container-name .
+docker build -t ORG/CONTAINER:TAG .
 ```
 
 Next you can run the container locally to test:
@@ -26,11 +26,11 @@ Once that runs (check its status with `docker ps`) you can see the Flask site by
 Finally, commit and push your code. You can also push your container image to Docker Hub or another registry:
 
 ```
-docker push your-org/your-container-name
+docker push ORG/CONTAINER:TAG
 ```
 
 ## Launching in DCOS @ UVA
 
 1. Work with UVA Research Computing to set up your initial Flask service. This may include "production" and "dev" sites along with your `master` and `dev` branches in Git.
-2. We recommend using a CI/CD tool such as Travis-CI to build and deploy your application container with each `git push`. See the example `.travis.yml` file for a basic build+push.
+2. We recommend using a CI/CD tool such as GitHub Actions to build and deploy your application container with each `git push`. See the example `.travis.yml` file for a basic build+push.
 3. UVARC can integrate your build so that it is launched in DCOS as part of that build process.
