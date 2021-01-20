@@ -17,16 +17,15 @@ committed in code. Set up secrets for either Docker or GitHub:
 
 1. Use a Docker Account username and token for CLI authentication.
 2. In the SETTINGS for your GitHub repository, create two repository secrets:
-
-  a. `DOCKER_USERNAME` - with the Docker username.
-  b. `DOCKER_PASSWORD` - with the Docker authentication token.
+  - `DOCKER_USERNAME` - with the Docker username.
+  - `DOCKER_PASSWORD` - with the Docker authentication token.
 
 **GitHub Packages**
 
 1. Use a GitHub Account username and PAT (personal access token) for CLI authentication.
 2. In the SETTINGS for your GitHub repository, create two repository secrets:
-  a. `GH_USER` - with the GitHub username.
-  b. `GH_PAT` - with the GitHub PAT.
+  - `GH_USER` - with the GitHub username.
+  - `GH_PAT` - with the GitHub PAT.
 
 ## Build the container on `git push`
 
