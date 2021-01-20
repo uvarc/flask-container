@@ -17,6 +17,7 @@ committed in code. Set up secrets for either Docker or GitHub:
 
 1. Use a Docker Account username and token for CLI authentication.
 2. In the SETTINGS for your GitHub repository, create two repository secrets:
+
   a. `DOCKER_USERNAME` - with the Docker username.
   b. `DOCKER_PASSWORD` - with the Docker authentication token.
 
