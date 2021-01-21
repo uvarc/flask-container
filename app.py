@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+import requests
 
 app = Flask(__name__)
 
@@ -27,6 +28,13 @@ def show_user(username):
 @app.route('/api/post/<int:post_id>', methods=['GET','POST'])
 def show_post(post_id):
     return jsonify(postid=post_id)
+
+# Take a github user/org and return results. Takes POST method.
+@app.route('/api/github/<username>', methods=['POST'])
+def show__github_user(username):
+    qurl = 'https://api.github.com/users/' + str(username)
+    r = requests.get(qurl)
+    return r.json()
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
