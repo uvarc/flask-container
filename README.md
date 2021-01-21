@@ -80,7 +80,7 @@ POST a GitHub user or org name and fetch basic information via their API, in JSO
 
 returns
 
-```
+```json
 {
   "avatar_url": "https://avatars.githubusercontent.com/u/54042486?v=4", 
   "bio": null, 
