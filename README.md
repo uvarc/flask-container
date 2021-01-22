@@ -23,6 +23,8 @@ Edit app.py and extend your code freely. The local web server will refresh autom
 
 ## Example Methods 
 
+### `/`
+
 Request the base path:
 
     curl http://localhost:5000/
@@ -31,7 +33,7 @@ returns
 
     "Flask Dockerized"
 
------
+### `/api/person`
 
 Request a static JSON value using GET
 
@@ -41,7 +43,7 @@ returns
 
     {"fname": "Lester", "lname": "Bangs", "year": 1982}
 
------
+### `/api/place`
 
 Request a static array rendered in JSON:
 
@@ -51,7 +53,7 @@ returns
 
     {"city":"Charlottesville","lat":38.0401199,"long":-78.5025264}
 
------
+### `/api/user/<username>`
 
 POST a string value and have it returned back in JSON:
 
@@ -62,7 +64,7 @@ returns
     {"user":"foobar"}
 
 
------
+### `/api/post/<int>`
 
 POST or GET an integer and have it returned back in JSON:
 
@@ -72,7 +74,7 @@ returns
 
     {"postid":4459}
 
------
+### `/api/github/<userid>`
 
 POST a GitHub user or org name and fetch basic information via their API, in JSON:
 
@@ -118,7 +120,7 @@ returns
 ```
 
 
-## Build the Container
+## Build the container
 
 The included Dockerfile will build your Flask application into a container with a production server (nginx)
 which is more robust than the built-in Flask web server. Note that nginx runs on port 80, the typical port
@@ -130,13 +132,13 @@ From within your cloned and extended version of this repository, first build the
 docker build -t ORG/CONTAINER:TAG .
 ```
 
-Next you can run the container locally to test. Map port 80 of the container to port 8080 of your workstation:
+Next you can run the container locally in detached mode to test. Map port 80 of the container to port 8080 of your workstation:
 
 ```
 docker run -d -p 8080:80 ORG/CONTAINER:TAG
 ```
 
-Once that runs (check its status with `docker ps`) you can see the Flask site by visiting http://localhost:8080/ in your browser.
+Once your container is running (check its status with `docker ps`) you can see the Flask site by visiting http://localhost:8080/ in your browser.
 
 Finally, commit and push your code. You can also push your container image to Docker Hub or another registry:
 
