@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Set up a response at the root / path. Takes GET method.
 @app.route('/', methods=['GET'])
 def hello_world():
-    return 'Flask Dockerized'
+    return 'Hello there everybody!'
 
 # Pass a static JSON dict. Takes GET method.
 @app.route('/api/person', methods=['GET'])
@@ -24,6 +24,11 @@ def return_place():
 def show_user(username):
     return jsonify(user=username)
 
+@app.route('/api/add/<first>/<second>', methods=['GET'])
+def add_numbers(first,second):
+    new_number = int(first) + int(second)
+    return jsonify(new_number=new_number)
+
 # Take an int var and echo back. Takes GET or POST method.
 @app.route('/api/post/<int:post_id>', methods=['GET','POST'])
 def show_post(post_id):
@@ -31,7 +36,7 @@ def show_post(post_id):
 
 # Take a github user/org and return results. Takes POST method.
 @app.route('/api/github/<username>', methods=['POST'])
-def show__github_user(username):
+def show_github_user(username):
     qurl = 'https://api.github.com/users/' + str(username)
     r = requests.get(qurl)
     return r.json()
