@@ -147,6 +147,13 @@ docker push ORG/CONTAINER:TAG
 docker push ghcr.io/ORG/CONTAINER:TAG
 ```
 
+## Launching in AWS Lightsail
+
+Read [**Lightsail Containers: An Easy Way to Run your Containers in the Cloud**](https://aws.amazon.com/blogs/aws/lightsail-containers-an-easy-way-to-run-your-containers-in-the-cloud/) and follow the steps to publish your container into a Lightsail deployment.
+
+Lightsail is a new AWS service meant to ease the learning curve for complex deployments through automation and pre-defined launch templates.
+
+
 ## Launching in DCOS @ UVA
 
 1. Work with UVA Research Computing to set up your initial Flask service. This may include "production" and "dev" sites along with your `master` and `dev` branches in Git.
