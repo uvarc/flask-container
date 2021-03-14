@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Set up a response at the root / path. Takes GET method.
 @app.route('/', methods=['GET'])
 def hello_world():
-    return 'Hello there everybody! How are you?'
+    return "Hello there everybody, it's a bright sunny day outside."
 
 # Pass a static JSON dict. Takes GET method.
 @app.route('/api/person', methods=['GET'])
