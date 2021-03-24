@@ -1,4 +1,4 @@
 Flask
-boto3
+flask-restful
 uwsgi
 requests
